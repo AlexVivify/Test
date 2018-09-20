@@ -11,12 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('home', function () {
-    return "Return this text for now...";
-});
+Route::group(['middleware'=>'home-middleware'], function () {
+    Route::get('/', function () {
+        return view('welcome');
+    });
 
+    Route::get('home', function () {
+        return "Return this text for now...";
+    });
+});
 
