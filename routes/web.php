@@ -22,3 +22,4 @@ Route::group(['middleware'=>'home-middleware'], function () {
     });
 });
 
+Route::get('index', 'HomeController@index');
