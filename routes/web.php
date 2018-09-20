@@ -17,8 +17,7 @@ Route::group(['middleware'=>'home-middleware'], function () {
         return view('welcome');
     });
 
-    Route::get('home', function () {
-        return "Return this text for now...";
-    });
+    Route::get('home', 'HomeController@index');
 });
+
 
