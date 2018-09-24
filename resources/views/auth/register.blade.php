@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
+
 @section('content')
+
+<?php
+    $countries = config('countries');
+    info($countries[0]);
+?>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -10,6 +16,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
+
 
                         <div class="form-group row">
                             <label for="firstname" class="col-md-4 col-form-label text-md-right">{{ __('Firstname') }}</label>
@@ -57,8 +64,11 @@
                             <label for="country" class="col-md-4 col-form-label text-md-right">{{ __('Country') }}</label>
 
                             <div class="col-md-6">
-                                <input id="country" type="text" class="form-control{{ $errors->has('country') ? ' is-invalid' : '' }}" name="country" value="{{ old('country') }}" required autofocus>
-
+                                <select id="country" name="country">
+                                    @foreach($countries as $country)
+                                        <option value={{$country}}> {{$country}} </option>
+                                   @endforeach
+                                </select>
                                 @if ($errors->has('country'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('country') }}</strong>
