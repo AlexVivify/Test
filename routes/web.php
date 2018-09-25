@@ -19,9 +19,3 @@ Route::group(['middleware'=>['home-middleware','auth']], function () {
 
 
 Auth::routes();
-
-// Route::get('home', 'HomeController@home');
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });

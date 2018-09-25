@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+<nav class="navbar navbar-expand-md navbar-light navbar-laravel bg-info">
     <div class="container">
         <a class="navbar-brand" >
             {{ config('app.name') }}
