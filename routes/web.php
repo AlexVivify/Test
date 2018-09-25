@@ -17,13 +17,12 @@ Route::group(['middleware'=>['home-middleware','auth']], function () {
         return view('welcome');
     });
 
-    Route::get('index', 'HomeController@index');
-
     Route::get('home', 'HomeController@home');
 });
 
 
 
 Auth::routes();
+
 
 
