@@ -5,7 +5,6 @@
 
 <?php
     $countries = config('countries');
-    info($countries[0]);
 ?>
 <div class="container">
     <div class="row justify-content-center">
@@ -66,8 +65,8 @@
                             <div class="col-md-6">
                                 <select id="country" name="country">
                                     @foreach($countries as $country)
-                                        <option value={{$country}}> {{$country}} </option>
-                                   @endforeach
+                                        <option value="{{$country}}"> {{$country}} </option>
+                                    @endforeach
                                 </select>
                                 @if ($errors->has('country'))
                                     <span class="invalid-feedback" role="alert">

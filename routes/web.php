@@ -24,6 +24,5 @@ Route::group(['middleware'=>['home-middleware','auth']], function () {
 
 Auth::routes();
 
-Route::get('test', 'HomeController@test');
 
 
