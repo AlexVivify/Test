@@ -13,16 +13,15 @@
 
 
 Route::group(['middleware'=>['home-middleware','auth']], function () {
-    Route::get('/', function () {
-        return view('welcome');
-    });
-
-    Route::get('home', 'HomeController@home');
+    Route::get('/', 'HomeController@home');
 });
 
 
 
 Auth::routes();
 
+// Route::get('home', 'HomeController@home');
 
-
+// Route::get('/', function () {
+//     return view('welcome');
+// });
